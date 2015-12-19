@@ -5,7 +5,6 @@ Resolve dependencies
 ```
 make
 ```
-```
 Start server
 ```
 make server
