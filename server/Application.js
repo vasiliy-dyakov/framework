@@ -1,5 +1,5 @@
 import express from 'express';
-import _ from 'lodash';
+import { find } from 'lodash';
 import debug from 'debug';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
@@ -104,7 +104,7 @@ export default class Application {
     staticRequestHandler(request, response) {
         var path = request.path.replace(staticRoot, '');
 
-        if (_.find(staticConfig.enabledPatterns, pattern => pattern.test(path))) {
+        if (find(staticConfig.enabledPatterns, pattern => pattern.test(path))) {
             logInfo('Request static path', path);
             response.sendFile(rootDir + path);
         } else {
