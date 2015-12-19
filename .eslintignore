@@ -1,0 +1,4 @@
+.git/**
+.githooks/**
+node_modules/**
+dist/**
