@@ -23,7 +23,6 @@ static: $(NPM_ROOT)
 .PHONY: lint
 lint: $(NPM_ROOT)
 	@$(NPM_BIN)/eslint .
-	@$(NPM_BIN)/jscs .
 
 .PHONY: test
 test:
